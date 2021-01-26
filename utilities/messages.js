@@ -92,11 +92,11 @@ module.exports = function (graph_api) {
 
                 //Splitting the sender message to multiple words to find the query by comparing each word with the tag from the google sheet
                 var each_word= incoming_message.split(" ");
-                console.log("Incoming Mmessage " + each_word)                
+                console.log("Incoming Mmessage: " + each_word)                
 
                 each_word.forEach(function (element) {
 
-                    console.log("word is " + element)
+                    console.log("word is: " + element  + " / " + eachRow)
 
                     if (eachRow.has(element)) {
                         found_word_flag=true;
@@ -104,6 +104,8 @@ module.exports = function (graph_api) {
                     }
 
                 })
+
+                console.log("Found Word: " + found_word)  
 
                 //Get the details from google sheet if the any word is same as any of the tag in the sheet
 
