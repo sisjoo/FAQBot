@@ -79,7 +79,7 @@ module.exports = function (graph_api) {
             //- User friendliness  check for "message too short"
             if (incoming_message.length < 3) {
 
-                this._sendMessage(senderID, "Sorry your message is too short for me to understand , please ensure input message should at least be 3 or more letters");
+                this._sendMessage(senderID, "Sorry! your message is too short for me to understand , please ensure input message should at least be 3 or more letters");
             /*
                 Developer can add more checks to the incoming message and reply the the sender by adding conditions here
              */
@@ -92,6 +92,7 @@ module.exports = function (graph_api) {
 
                 //Splitting the sender message to multiple words to find the query by comparing each word with the tag from the google sheet
                 var each_word= incoming_message.split(" ");
+                console.log("word is " + each_word)                
 
                 each_word.forEach(function (element) {
 
