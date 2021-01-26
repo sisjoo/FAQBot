@@ -96,7 +96,7 @@ module.exports = function (graph_api) {
 
                 each_word.forEach(function (element) {
 
-                    console.log("word is: " + element  + " / " + eachRow)
+                    console.log("word is: " + element  + " / " + rowsval[1].tag )
 
                     if (eachRow.has(element)) {
                         found_word_flag=true;
