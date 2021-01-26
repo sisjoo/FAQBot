@@ -92,7 +92,7 @@ module.exports = function (graph_api) {
 
                 //Splitting the sender message to multiple words to find the query by comparing each word with the tag from the google sheet
                 var each_word= incoming_message.split(" ");
-                console.log("word is " + each_word)                
+                console.log("Incoming Mmessage " + each_word)                
 
                 each_word.forEach(function (element) {
 
